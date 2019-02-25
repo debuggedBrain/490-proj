@@ -4,15 +4,21 @@
 		<title>BookScape</title>
 	</head>
 	<body>	
+		<div class = "ban">
+			<img class = "bsb" src = "banner-books.png" alt = "banner image" style = "width:100%;">
+		</div>
 		<form method = "POST" action = "eneternameofphpfile" id = "signin">
-			<input class = " modalinput" name = "user" type = "text" placeholder = "username" value = "user"> 
-				<h6> name must be unique</h6>
-			<input class = " modalinput" name = "pass" type = "text" placeholder = "password" value = "password"> 
-				<h6>Do not share passwords. must contian at least 1 number and 1 Uppercase</h6>
-		<input value = "signup" type= "submit">
+			<div id = "stuff">
+				<input class = " modalinput" name = "user" type = "text" placeholder = "username" value = "user"> 
+				<input class = " modalinput" name = "pass" type = "text" placeholder = "password" value = "password"> 
+				<input value = "signup" type= "submit">
+			</div>
 		</form>
 	</body>
 </html>
 <style>
 body{background-color:skyblue;}
+#signin{ width: 50%; margin: auto; margin-top:100px; background: white; box-shadow: 3px 5px 3px 3px;}
+body{ background-image: "banner-books.png";}
+.bsb{ margin: auto; margin-top: 40 px; height: 160px}
 </style>
