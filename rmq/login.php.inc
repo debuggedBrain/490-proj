@@ -13,7 +13,7 @@ public function __construct()
 		echo "Error connecting to database: ".$this->logindb->connect_error.PHP_EOL;
 		exit(1);
 	}
-	echo "correctly connected to database".PHP_EOL;
+	echo "Correctly connected to database".PHP_EOL;
 }
 
 public function validateLogin($username,$password)
@@ -28,19 +28,20 @@ public function validateLogin($username,$password)
 		echo "Checking if user $un is in database...\n";
 		if ($row["username"] == $un)
 		{
-			echo "$un is in the database.\n";
-		}
-		else
-		{
-			echo "$un is not in the database!";
-		}
-		echo "checking password for $username".PHP_EOL;
-		if ($row["password"] == $pw)
-		{
-			echo "passwords match for $username".PHP_EOL;
-			return 1;// password match
-		}
-		echo "passwords did not match for $username".PHP_EOL;
+			echo "User $un is in the database.\n";
+			echo "Checking password for $username ...".PHP_EOL;
+			if ($row["password"] == $pw)
+			{
+				echo "Passwords match for $username .".PHP_EOL;
+				echo "\n----DONE SEARCHING----\n\n";
+				return 1;// password match
+			}
+			echo "Passwords did not match for $username".PHP_EOL;
+			echo "\n----DONE SEARCHING----\n\n";
+		}else{
+			echo "The user $un is not in the database";
+			echo "\n----DONE SEARCHING----\n\n";
+		}	
 	}
 	return 0;//no users matched username
 }
