@@ -5,21 +5,39 @@
 		<title>BookScape</title>
 	</head>
 	<body>	
-		<div class = "ban">
-			<img class = "bsb" src = "banner-books.png" alt = "banner image" style = "width:100%;">
-		</div>
-		<form method = "POST" action = "eneternameofphpfile" id = "signin">
-			<div id = "stuff">
-				<input class = " modalinput" name = "user" type = "text" placeholder = "username" value = "user"> 
-				<input class = " modalinput" name = "pass" type = "text" placeholder = "password" value = "password"> 
-				<input value = "signup" type= "submit">
+		<form method = "POST" action = "signup.php" id = "signin">
+			
+			<div class = "ban">
+				<img class = "bsb" src = "banner-books.png" alt = "banner image" style = "width:100%;">
 			</div>
+			
+			<div class = "name">
+				<input class = " modalinput" id = "box" name = "firstname" type = "text" placeholder = "Firstname" value = "firstname"> 
+				
+				<input class = " modalinput" id = "box" name = "Lastname" type = "text" placeholder = "Lastname" value = "last">
+			</div>
+
+			<div id = "stuff">
+				
+				<input class = " modalinput" id = "box" name = "user" type = "text" placeholder = "username" value = "user"> 
+					<h6 id ="note"> *Name can have nums, sysmbol*
+				
+				<input  id = "box" class = " modalinput" name = "pass" type = "text" placeholder = "password" value = "password"> 
+					<h6 id ="note"> *Password must be 8 - 16 characters long, contian 1 number or sysmbol*
+					<h6>
+				<input value = "signup" type= "submit" id = "sign">
+					<h6> By sigining up you agree to our terms and services 
+					<a href = "terms.html">click to view terms & services</a>
+			</div>
+		
 		</form>
 	</body>
 </html>
 <style>
-body{background-color:skyblue;}
-#signin{ width: 50%; margin: auto; margin-top:100px; background: white; box-shadow: 3px 5px 3px 3px;}
+#signin{ width: 50%; margin: auto; margin-top:100px; background: light blue; box-shadow: 3px 5px 3px 3px; border: 1px solid gray;}
 body{ background-image: "banner-books.png";}
-.bsb{ margin: auto; margin-top: 40 px; height: 160px}
+.bsb{ margin: auto; margin-top: 40 px; height: 100px}
+#note{ color:red;}
+#box{border:2px solid blue; margin-top: 5px; }
+#sign{color: white; background-color: blue;}
 </style>
