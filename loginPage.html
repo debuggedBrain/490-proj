@@ -5,20 +5,13 @@
 </head>
 
 <body>
-<form class="form-signin" action="login.php" method="post">
+<form action="login.php" method="post">
 Username:
-<input type="text" name="username" id="username"><br>
+<input type="text" name="username"><br>
 Password:
-<input type="password" name="password" id="username"><br>
+<input type="password" name="password"><br>
 <input type="submit" value="Submit"><br>
 </form>
-
-<?php
-$username = $_GET['username'];
-$password = $_GET['password'];
-echo "Hello, how are you " + $username;
-
-?>
 
 </body>
 
