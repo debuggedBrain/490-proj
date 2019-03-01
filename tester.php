@@ -1,5 +1,6 @@
 <?php 
-$username = "matt\n";
+$username1 = "matt\n";
+$username = $_POST["username"];
 echo "just a test $username";
 ?>
 
