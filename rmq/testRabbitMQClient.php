@@ -1,11 +1,10 @@
-#!/usr/bin/php
 <?php
 require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 
 $client = new rabbitMQClient("testRabbitMQ.ini","testServer");
-
+$clientuser = $_POST['username1']
 
 $request = array();
 $request['type'] = "login";
