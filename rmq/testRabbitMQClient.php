@@ -4,6 +4,9 @@ require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 require_once('../tester.php');
 
+error_reporting(E_ALL);
+ini_set('display_errors','1');
+
 $client = new rabbitMQClient("testRabbitMQ.ini","testServer");
 
 $request = array();
