@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?php
 $username1 = "matt\n";
 $username2 = $_POST["username3"];
