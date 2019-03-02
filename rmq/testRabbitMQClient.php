@@ -15,6 +15,8 @@ $request['message'] = "HI";
 $response = $client->send_request($request);
 //$response = $client->publish($request);
 
+$array1 = $request;
+
 echo "client received response: ".PHP_EOL; 
 print_r($response);
 echo "\n\n";
