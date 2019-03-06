@@ -10,7 +10,6 @@
 	function runClient(){
 		//function below will run testRabbitMQClient.php
 		$.ajax({
-			type:"GET",
 			url: "../rmq/testRabbitMQClient.php",
 			success: function(){
 				location.href="../homev2.html";
@@ -24,7 +23,7 @@ Username:
 <input type="text" name="username3"><br>
 Password:
 <input type="password" name="password"><br>
-<button onclick="runClient()"> Login </button><br>
+<button id="submit" onclick="runClient()"> Login </button><br>
 </form>
 
 </body>
