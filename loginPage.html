@@ -5,13 +5,26 @@
 <h1>Welcome!</h1>
 </head>
 
+<script type="text/javascript" src"//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script language="javascript">
+	function runClient(){
+		//function below will run testRabbitMQClient.php
+		$.ajax({
+			type:"GET",
+			url: "../rmq/testRabbitMQClient.php",
+			success: function(){
+				location.href="../homev2.html";
+			}
+		});
+	}
+</script>
 <body>
-<form action="rmq/testRabbitMQClient.php" method="post">
+<form action="tester.php" method="post">
 Username:
 <input type="text" name="username3"><br>
 Password:
 <input type="password" name="password"><br>
-<input type="submit" value="Submit"><br>
+<button onclick="runClient()"> Login </button><br>
 </form>
 
 </body>
